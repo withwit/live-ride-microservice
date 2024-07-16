@@ -9,12 +9,13 @@ import org.springframework.stereotype.Repository;
 import java.time.Instant;
 import java.util.Date;
 import java.util.Random;
-import java.util.UUID;
+
 @Repository
 public class rideDAOImpl implements rideDAO {
 
     //constructor injection
     private EntityManager entityManager;
+    Random rand = new Random();
     @Autowired
     public rideDAOImpl(EntityManager em) {
         entityManager = em;
@@ -24,7 +25,7 @@ public class rideDAOImpl implements rideDAO {
     @Transactional
     public Ride generateRide() {
         Ride _ride = new Ride();
-        _ride.setRide_id(1212);
+        _ride.setRide_id(rand.nextInt(1000));
         _ride.setRide_state("Draft");
         _ride.setPath_id(000);
         _ride.setRide_date(Date.from(Instant.now()));
@@ -35,6 +36,6 @@ public class rideDAOImpl implements rideDAO {
 
         entityManager.persist(_ride);
 
-        return _ride;
+        return entityManager.find(Ride.class,_ride.getRide_id());
     }
 }
