@@ -10,6 +10,7 @@ import java.util.UUID;
 public class Ride {
     @Id
     @Column(name = "ride_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ride_id;
 
     @Column(name="rider_id")

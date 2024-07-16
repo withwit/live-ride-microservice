@@ -25,7 +25,7 @@ public class rideDAOImpl implements rideDAO {
     @Transactional
     public Ride generateRide() {
         Ride _ride = new Ride();
-        _ride.setRide_id(rand.nextInt(1000));
+//        _ride.setRide_id(rand.nextInt(1000));
         _ride.setRide_state("Draft");
         _ride.setPath_id(000);
         _ride.setRide_date(Date.from(Instant.now()));
