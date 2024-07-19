@@ -49,23 +49,5 @@ public class RestController {
         }
     }
 
-    @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleException(RideNotFoundException e){
-        ErrorResponse errorResponse = new ErrorResponse();
-        errorResponse.setStatus(HttpStatus.NOT_FOUND.value());
-        errorResponse.setMessage(e.getMessage());
-        errorResponse.setTimeStamp(System.currentTimeMillis());
 
-        return new ResponseEntity<>(errorResponse,HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<ErrorResponse> baseExceptionHandler(Exception e){
-        ErrorResponse errorResponse = new ErrorResponse();
-        errorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
-        errorResponse.setMessage(e.getMessage());
-        errorResponse.setTimeStamp(System.currentTimeMillis());
-
-        return new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
-    }
 }
