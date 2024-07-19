@@ -6,5 +6,8 @@ import java.util.List;
 
 public interface RideService {
     List<Ride> getAllRides();
+
     Ride generateRide();
+
+    Ride getRide(int id);
 }

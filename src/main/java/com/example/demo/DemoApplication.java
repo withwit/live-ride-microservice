@@ -10,16 +10,16 @@ import java.util.UUID;
 @SpringBootApplication
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 
-	@Bean
-	public CommandLineRunner commandLineRunner(String[] args){
-		return runner->{
-			System.out.println("Hello world!!!");
-			System.out.println(UUID.randomUUID().toString().substring(0,10));
-		};
-	}
+    @Bean
+    public CommandLineRunner commandLineRunner(String[] args) {
+        return runner -> {
+            System.out.println("Hello world!!!");
+            System.out.println(UUID.randomUUID().toString().substring(0, 10));
+        };
+    }
 
 }

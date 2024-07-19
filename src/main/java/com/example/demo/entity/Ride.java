@@ -3,9 +3,8 @@ package com.example.demo.entity;
 import jakarta.persistence.*;
 
 import java.util.Date;
-import java.util.UUID;
 
-@Table(name="ride")
+@Table(name = "ride")
 @Entity
 public class Ride {
     @Id
@@ -13,19 +12,19 @@ public class Ride {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ride_id;
 
-    @Column(name="rider_id")
+    @Column(name = "rider_id")
     private Integer rider_id;
 
-    @Column(name="path_id")
+    @Column(name = "path_id")
     private Integer path_id;
 
-    @Column(name="ride_date")
+    @Column(name = "ride_date")
     private Date ride_date;
 
-    @Column(name="payment_id")
+    @Column(name = "payment_id")
     private Integer payment_id;
 
-    @Column(name="ride_state")
+    @Column(name = "ride_state")
     private String ride_state;
 
     public Ride() {
@@ -38,6 +37,7 @@ public class Ride {
         this.payment_id = payment_id;
         this.ride_state = ride_state;
     }
+
     public Integer getRide_id() {
         return ride_id;
     }
