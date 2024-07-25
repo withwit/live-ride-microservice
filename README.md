@@ -3,9 +3,9 @@
 3. Implement service layer and implement custom query.
 4. Error Exception handling.
 5. REST response configuration
-7. Unit testcase~~
+7. Unit testcase
 8. Non blocking async service.
-9. multi threading
+9. multi threading~~
 9. Thread Safety
 10. parallel processing.
 11. Scheduling Task
