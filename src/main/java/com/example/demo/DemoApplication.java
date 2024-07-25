@@ -17,7 +17,7 @@ public class DemoApplication {
     @Bean
     public CommandLineRunner commandLineRunner(String[] args) {
         return runner -> {
-            System.out.println("Hello world!!!");
+            System.out.println("Hello world!!! from Bean.");
             System.out.println(UUID.randomUUID().toString().substring(0, 10));
         };
     }
